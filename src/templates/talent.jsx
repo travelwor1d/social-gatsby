@@ -13,7 +13,7 @@ export default ({
   },
   pageContext: { next, prev },
 }) => (
-  <Layout title={"Talent — " + data.name.text}>
+  <Layout title={"Talent — " + data.name.text} scrollText="Scroll media">
     <SEO title={data.name.text} />
     <Container>
       <Left>
@@ -229,6 +229,8 @@ const Left = ({ children }) => {
   return (
     <div
       sx={{
+        position: "sticky",
+        top: 0,
         gridColumn: ["span 2", "span 2", "span 1"],
         px: [0, 0, 11],
       }}
